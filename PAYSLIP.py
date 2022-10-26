@@ -1,0 +1,36 @@
+#PROGRAM FOR EXCECUTE THE PAYSLIP FOR AN EMPLOYEE BY IF STATEMENT
+#program
+eno=int(input("ENTER THE EMPLOYEE NUMBER:"))
+ename=input("ENTER THE NAME:")
+basicsal=int(input("ENTER THE BASIC SALARY:"))
+if(basicsal<0):
+    print("{} is INVALID".format(basicsal))
+else:
+    if(basicsal>=20000):
+        ta=basicsal*(10/100)
+        da=basicsal*(20/100)
+        hra=basicsal*(15/100)
+        ma=basicsal*(2/100)
+        lic=basicsal*(2/100)
+        gpa=basicsal*(3/100)
+    else:
+        ta=basicsal*(8/100)
+        da=basicsal*(15/100)
+        hra=basicsal*(7/100)
+        ma=basicsal*(1/100)
+        lic=basicsal*(1/100)
+        gpa=basicsal*(2/100)
+    netsal=(basicsal+ta+da+hra+ma)-(lic+gpa)
+    print("="*50)
+    print("\tEMPLOYEE NUMBER:{}".format(eno))
+    print("\tEMPLOYEE NAME:{}".format(ename))
+    print("\tEMPLOYEE BASIC SALARY:{}".format(basicsal))
+    print("\tEMPLOYEE TA:{}".format(ta))
+    print("\tEMPLOYEE DA:{}".format(da))
+    print("\tEMPLOYEE HRA:{}".format(hra))
+    print("\tEMPLOYEE MA:{}".format(ma))
+    print("\tEMPLOYEE LIC:{}".format(lic))
+    print("\tEMPLOYEE GPA:{}".format(gpa))
+    print("="*50)
+    print("\tEMPLOYEE NET SALARY:{}".format(netsal))
+    print("="*50)
